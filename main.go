@@ -19,11 +19,19 @@ func main() {
 
 	// slice
 	bookingSlice := []string{}
-	bookingSlice = append(bookingSlice, "Prayash")
+	bookingSlice = append(bookingSlice, "John Doe", "Aliice")
 	fmt.Println(bookingSlice)
 
-	// input and output
+	// loops
+	for index, booking := range bookingSlice {
+		fmt.Printf("index %v, name %v \n", index, booking)
+	}
 
+	for _, booking := range bookingSlice {
+		fmt.Println(booking)
+	}
+
+	// input and output
 	// show data
 	fmt.Printf("Welcome to %v booking application \n", conferenceName)
 	fmt.Printf("We have total of %v tickets and %v are still available \n", conferenceTickets, remainingTickets)
