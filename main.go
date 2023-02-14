@@ -62,4 +62,16 @@ func main() {
 		fmt.Println("Else statement")
 	}
 
+	// switch statements
+	cityName := "Kathmandu"
+	switch cityName {
+	case "Kathmandu":
+		fmt.Println("Kathmandu Selected")
+	case "Bhaktapur":
+		fmt.Println("Bhaktapur Selected")
+	default:
+		fmt.Println("Not given")
+
+	}
+
 }
