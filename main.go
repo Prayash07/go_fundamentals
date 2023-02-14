@@ -43,11 +43,23 @@ func main() {
 	fmt.Println("Enter number of tickets")
 	fmt.Scan(&userTickets)
 
+	if userTickets > remainingTickets {
+		fmt.Printf("Tickets not available. We have %v tickets remaining", remainingTickets)
+	}
+
 	// logic
 	remainingTickets = remainingTickets - userTickets
 
 	// show result
-	fmt.Printf("User %v booked %v tickets\n", userName, userTickets)
-	fmt.Printf("Number of tickets remaining %v", remainingTickets)
+
+	// if statement
+	if remainingTickets <= 0 {
+		fmt.Println("Tickets is not available")
+	} else if remainingTickets > 0 {
+		fmt.Printf("User %v booked %v tickets\n", userName, userTickets)
+		fmt.Printf("Number of tickets remaining %v", remainingTickets)
+	} else {
+		fmt.Println("Else statement")
+	}
 
 }
