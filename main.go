@@ -31,11 +31,10 @@ func main() {
 		fmt.Println(booking)
 	}
 
-	// input and output
-	// show data
-	fmt.Printf("Welcome to %v booking application \n", conferenceName)
-	fmt.Printf("We have total of %v tickets and %v are still available \n", conferenceTickets, remainingTickets)
-	fmt.Println("Get your ticket here to attend")
+	// function call
+	greetUsers(conferenceName, conferenceTickets, remainingTickets)
+	value := sharePrice(380, 350.1)
+	fmt.Printf("Total value is %v\n", value)
 
 	// to get data from user
 	fmt.Println("Enter you name")
@@ -74,4 +73,16 @@ func main() {
 
 	}
 
+}
+
+func greetUsers(conferenceName string, conferenceTickets int, remainingTickets int) {
+	// input and output
+	// show data
+	fmt.Printf("Welcome to %v booking application \n", conferenceName)
+	fmt.Printf("We have total of %v tickets and %v are still available \n", conferenceTickets, remainingTickets)
+	fmt.Println("Get your ticket here to attend")
+}
+
+func sharePrice(number int, price float32) float32 {
+	return price * float32(number)
 }
