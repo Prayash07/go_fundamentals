@@ -22,6 +22,14 @@ func main() {
 	bookingSlice = append(bookingSlice, "John Doe", "Aliice")
 	fmt.Println(bookingSlice)
 
+	// maps
+	var userData = make(map[string]string, 0)
+
+	userData["name"] = "Prayash Koirala"
+	userData["address"] = "Bhaktapur"
+
+	fmt.Println(userData)
+
 	// loops
 	for index, booking := range bookingSlice {
 		fmt.Printf("index %v, name %v \n", index, booking)
